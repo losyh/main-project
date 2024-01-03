@@ -5,6 +5,10 @@ import styled from 'styled-components';
 
 import {authenticate} from 'src/store/actions/auth';
 
+const Lox = () => {
+  console.log('Sdvsdv')
+}
+
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
