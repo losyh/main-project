@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import {authenticate} from 'src/store/actions/auth';
 
+
+console.log('test branch');
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
