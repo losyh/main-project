@@ -30,6 +30,57 @@ const LogoStyled = styled.img`
   margin-bottom: 20px;
 `;
 
+const Input = styled.input`
+width: 460px;
+height: 40px;
+border-radius: 5px;
+border: 1px solid var(--borders-elements, rgba(0, 0, 0, 0.20));
+background: #FFF;
+margin: 0 0 20px;
+`;
+
+const Title = styled.h1`
+color: var(--Text-Black, #0D0D0D);
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px;
+margin: 0 0 20px;
+`
+
+const SubTitle = styled.p`
+color: var(--Text-Black, #0D0D0D);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+margin: 0 0 5px;
+`
+const LogBtn = styled.button`
+width: 110px;
+height: 40px;
+border-radius: 5px;
+background: linear-gradient(180deg, #45A6FF 0%, #0055FB 100%), #C4C4C4;
+color: #FFF;
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 30px;
+outline: none;
+border: none;
+`
+
+const LinkToGit = styled.p`
+color: var(--Text-gray, #999);
+text-align: center;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 20px;
+margin: 20px 0 0; 
+`
+
 function LoginPage({history}) {
   const dispatch = useDispatch();
   const [login, setLogin] = useState('');
@@ -64,13 +115,18 @@ function LoginPage({history}) {
     <Wrapper>
       <LogoStyled src="/icons/logo.svg" alt="" />
       <Form onSubmit={onSubmit} action="/">
-        <input value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Логин" />
-        <input value={sublogin} onChange={(e) => setSubLogin(e.target.value)} placeholder="Сублогин" />
-        <input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Сублогин" />
-        <button type="submit" onClick={onSubmit}>
-          Отправить
-        </button>
+        <Title>API-консолька</Title>
+        <SubTitle>Логин</SubTitle>
+        <Input value={login} onChange={(e) => setLogin(e.target.value)} placeholder="Логин" />
+        <SubTitle>Сублогин</SubTitle>
+        <Input value={sublogin} onChange={(e) => setSubLogin(e.target.value)} placeholder="Сублогин" />
+        <SubTitle>Пароль</SubTitle>
+        <Input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Пароль" />
+        <LogBtn type="submit" onClick={onSubmit}>
+          Войти
+        </LogBtn>
       </Form>
+      <LinkToGit>@link-to-your-github</LinkToGit>
     </Wrapper>
   );
 }
