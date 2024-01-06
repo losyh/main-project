@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import createStore from 'src/store';
 import LoginPage from 'src/containers/LoginPage';
+import MainPage from './containers/MainPage';
 
 const {store, persistor} = createStore();
 
@@ -16,6 +17,7 @@ function App() {
           <Switch>
             <Route path="/">
               <LoginPage />
+              {/* <MainPage/> */}
             </Route>
           </Switch>
         </PersistGate>
