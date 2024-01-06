@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import {authenticate} from 'src/store/actions/auth';
 
 
-console.log('test branch');
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
@@ -42,6 +41,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 30px;
+padding-left: 5px;
 `;
 
 const InputPass = styled(Input)`
@@ -139,7 +139,7 @@ function LoginPage({history}) {
   const errorP = error ? {color: 'var(--Red, #CF2C00)'} : null;
   return (
     <Wrapper>
-      <LogoStyled src="/icons/logo.svg" alt="" />
+      <LogoStyled src="/icons/logo.svg" alt="logo" />
       <Form onSubmit={onSubmit} action="/">
         <Title>API-консолька</Title>
         <SubTitle style={errorP}>Логин</SubTitle>
